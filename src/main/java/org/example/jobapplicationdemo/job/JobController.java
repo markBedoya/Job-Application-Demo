@@ -35,6 +35,7 @@ public class JobController {
 
   @PostMapping
   public ResponseEntity<String> createJob(@RequestBody Job job) {
+    //TODO - This will throw 500 internal server error if company doesn't exist.
     jobService.createJob(job);
     return new ResponseEntity<>("Job added successfully.", HttpStatus.CREATED);
   }
