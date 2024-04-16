@@ -14,7 +14,13 @@ How to create Docker Image and push to Docker Registry:
 2. Create docker image with [./mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=markbedoya/job-app-image"]
 3. Login with [docker login]
 4. Check current docker images and their tags with [docker images]
-5. Push with [docker push markbedoya/job-app-image:latest]
+5. Run image with [docker run -d -p 8080:8080 markbedoya/job-app-image]
+6. See docker containers running with [docker ps]
+7. See application logs with [docker logs <container-id>]
+8. Stop docker container with [docker stop <container-id>]
+9. See docker all containers with [docker ps -a]
+10. remove docker container with [docker rm <container-id>]
+11. Push image to docker hub with [docker push markbedoya/job-app-image:latest]
 
 Docker CMDs for testing reference:
   docker pull <image>
