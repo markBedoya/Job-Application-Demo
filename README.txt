@@ -6,3 +6,31 @@ H2 Database       - Rapid DB prototyping within Intellij or with browser url /h2
 Test.http Files   - Rapid HTTP request/response testing within the project instead of using external Postman or Swagger 
 Lombok            - Java library using known patterns to reduce the boilerplate code
 Spring Actuator   - Module that provides production-ready features to monitor and manage your Spring Boot application
+Docker            - Use built in spring-boot-maven-plugin to create docker image
+
+How to create Docker Image and push to Docker Registry:
+0. Generate Maven Wrapper files - In root project folder, run cmd [mvn wrapper:wrapper] if not present already to run the cmd below.
+1. Startup Docker engine in order to run the cmd below in the root directory of the project.
+2. Create docker image with [./mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=markbedoya/job-app-image"]
+3. Login with [docker login]
+4. Check current docker images and their tags with [docker images]
+5. Push with [docker push markbedoya/job-app-image:latest]
+
+Docker CMDs for testing reference:
+  docker pull <image>
+  docker push <username/image>
+  docker run -p <host-port>:<container-port> <image>
+  docker run -it -d -p <host-port>:<container-port> --name <name> <image>
+  docker stop <container-id or container-name>
+  docker start <container-id or container-name>
+  docker rm <container-id or container-name>
+  docker rmi <container-id or container-name>
+  docker ps
+  docker ps -a
+  docker images
+  docker exec -it <container-id or container-name> bash
+  docker build -t <username/image>
+  docker logs <container-id or container-name>
+  docker inspect <container-id or container-name>
+
+
