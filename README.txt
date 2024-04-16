@@ -1,14 +1,14 @@
 Job-Application-Demo  
 
-Java Spring Boot Rest API Demo  
-Maven             - Build automation and dependency management  
-H2 Database       - Rapid DB prototyping within Intellij or with browser url /h2-console
-Test.http Files   - Rapid HTTP request/response testing within the project instead of using external Postman or Swagger 
-Lombok            - Java library using known patterns to reduce the boilerplate code
-Spring Actuator   - Module that provides production-ready features to monitor and manage your Spring Boot application
-Docker            - Use built in spring-boot-maven-plugin to create docker image
+Java Spring Boot Rest API with PostgreSQL DB Demo
+Maven             - Automation and dependency management
+H2 Database       - Rapid DB prototyping in memory with browser url /h2-console
+Test.http Files   - Rapid HTTP request/response testing within the project
+Lombok            - Java library using known patterns to reduce code
+Spring Actuator   - Module that provides features to monitor and manage the application
+Docker            - Spring Boot library <spring-boot-maven-plugin> to create docker image
 
-How to create Docker Image and push to Docker Registry:
+How to create Docker Image of this app and push to Docker Registry:
 0. Generate Maven Wrapper files - In root project folder, run cmd [mvn wrapper:wrapper] if not present already to run the cmd below.
 1. Startup Docker engine in order to run the cmd below in the root directory of the project.
 2. Create docker image with [./mvnw spring-boot:build-image "-Dspring-boot.build-image.imageName=markbedoya/job-app-image"]
