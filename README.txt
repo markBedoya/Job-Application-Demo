@@ -2,9 +2,9 @@ Job-Application-Demo
   Java Spring Boot Rest API with PostgreSQL DB
 
 Summary:
-  Companies can be created/updated/deleted with HTTP requests GET/POST/PUT/DELETE
+  Companies can be created/updated/deleted with HTTP requests GET/POST/PUT/DELETE.
   Companies can post/update/delete jobs with HTTP requests GET/POST/PUT/DELETE.
-  Users can submit/update/delete reviews under companies with HTTP requests GET/POST/PUT/DELETE.
+  Submit/update/delete reviews under companies with HTTP requests GET/POST/PUT/DELETE.
 
 Technologies:
   Java              - Primary language
