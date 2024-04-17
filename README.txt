@@ -1,9 +1,9 @@
 Job-Application-Demo  
 
 Summary:
-  Campanies can be created/updated/deleted with HTTP requests GET/POST/PUT/DELETE
-  Companies can post jobs with HTTP requests GET/POST/PUT/DELETE.
-  Users can submit reviews under companies with HTPP requests GET/POST/PUT/DELETE.
+  Companies can be created/updated/deleted with HTTP requests GET/POST/PUT/DELETE
+  Companies can post/update/delete jobs with HTTP requests GET/POST/PUT/DELETE.
+  Users can submit/update/delete reviews under companies with HTTP requests GET/POST/PUT/DELETE.
 
 Technologies:
   Java Spring Boot Rest API with PostgreSQL DB
