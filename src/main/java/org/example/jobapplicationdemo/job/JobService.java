@@ -5,8 +5,8 @@ import java.util.Optional;
 
 public interface JobService {
   List<Job> getAllJobs();
-  Optional<Job> getJobById(Long id);
+  Optional<Job> getJobById(Long jobId);
   void createJob(Job job);
-  boolean updateJobById(Long id, Job updatedJob);
-  boolean deleteJobById(Long id);
+  boolean updateJobById(Long jobId, Job updatedJob);
+  boolean deleteJobById(Long jobId);
 }

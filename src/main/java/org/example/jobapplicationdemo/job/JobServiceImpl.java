@@ -17,8 +17,8 @@ public class JobServiceImpl implements JobService {
   }
 
   @Override
-  public Optional<Job> getJobById(Long id) {
-    return jobDao.findById(id);
+  public Optional<Job> getJobById(Long jobId) {
+    return jobDao.findById(jobId);
   }
 
   @Override
@@ -27,8 +27,8 @@ public class JobServiceImpl implements JobService {
   }
 
   @Override
-  public boolean updateJobById(Long id, Job updatedJob) {
-    Optional<Job> jobOptional = jobDao.findById(id);
+  public boolean updateJobById(Long jobId, Job updatedJob) {
+    Optional<Job> jobOptional = jobDao.findById(jobId);
     if (jobOptional.isPresent()) {
       Job jobToUpdate = jobOptional.get();
       jobToUpdate.setTitle(updatedJob.getTitle());
@@ -43,11 +43,11 @@ public class JobServiceImpl implements JobService {
   }
 
   @Override
-  public boolean deleteJobById(Long id) {
-    if (!jobDao.existsById(id)) {
+  public boolean deleteJobById(Long jobId) {
+    if (!jobDao.existsById(jobId)) {
       return false;
     }
-    jobDao.deleteById(id);
+    jobDao.deleteById(jobId);
     return true;
   }
 
