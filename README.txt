@@ -1,4 +1,5 @@
-Job-Application-Demo  
+Job-Application-Demo
+  Java Spring Boot Rest API with PostgreSQL DB
 
 Summary:
   Companies can be created/updated/deleted with HTTP requests GET/POST/PUT/DELETE
@@ -6,7 +7,8 @@ Summary:
   Users can submit/update/delete reviews under companies with HTTP requests GET/POST/PUT/DELETE.
 
 Technologies:
-  Java Spring Boot Rest API with PostgreSQL DB
+  Java              - Primary language
+  Spring Boot       - Web Framework
   PostgreSQL DB     - Primary relational DB
   H2 Database       - Rapid DB prototyping in memory with browser url /h2-console
   Test.http Files   - Rapid HTTP request/response testing within the project
