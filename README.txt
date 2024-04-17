@@ -18,7 +18,7 @@ Technologies:
 API Documentation:
   CompanyControllerTest.http
   JobControllerTest.http
-  ReviewyControllerTest.http
+  ReviewControllerTest.http
 
 How to create Docker Image of this app and push to Docker Registry:
   0. Generate Maven Wrapper files - In root project folder, run cmd [mvn wrapper:wrapper] if not present already to run the cmd below.
