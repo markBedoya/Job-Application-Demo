@@ -62,8 +62,8 @@ public class ReviewServiceImpl implements ReviewService {
     }
     Review review = reviewOptional.get();
     Company company = companyOptional.get();
-    //TODO - understand this bidirectional mapping and why this is required to remove the review
-    // from company and I can't just delete it.
+    // Company owns the json child of review,therefore, we need to remove this review from the parent company.
+    // Otherwise, we can expose ourselves to tricky bidirectional bugs.
     review.setCompany(null);
     company.getReviews().remove(review);
     companyService.updateCompanyById(company.getId(),company);

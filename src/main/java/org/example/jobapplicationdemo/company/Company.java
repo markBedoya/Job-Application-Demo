@@ -26,9 +26,9 @@ public class Company {
   private Long id;
   private String name;
   private String description;
-  @OneToMany(mappedBy = "company", cascade = { CascadeType.REMOVE })
+  @OneToMany(mappedBy = "company", cascade = CascadeType.REMOVE)
   @JsonIgnore
   private List<Job> jobs;
-  @OneToMany(mappedBy = "company", cascade = { CascadeType.REMOVE })
+  @OneToMany(mappedBy = "company", cascade = CascadeType.REMOVE)
   private List<Review> reviews;
 }
