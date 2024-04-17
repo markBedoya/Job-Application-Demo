@@ -17,8 +17,8 @@ public class CompanyServiceImpl implements CompanyService {
   }
 
   @Override
-  public Optional<Company> getCompanyById(Long id) {
-    return companyDao.findById(id);
+  public Optional<Company> getCompanyById(Long companyId) {
+    return companyDao.findById(companyId);
   }
 
   @Override
@@ -27,8 +27,8 @@ public class CompanyServiceImpl implements CompanyService {
   }
 
   @Override
-  public boolean updateCompanyById(Long id, Company updatedCompany) {
-    Optional<Company> companyOptional = companyDao.findById(id);
+  public boolean updateCompanyById(Long companyId, Company updatedCompany) {
+    Optional<Company> companyOptional = companyDao.findById(companyId);
     if (companyOptional.isPresent()) {
       Company companyToUpdate = companyOptional.get();
       companyToUpdate.setName(updatedCompany.getName());
@@ -42,12 +42,11 @@ public class CompanyServiceImpl implements CompanyService {
   }
 
   @Override
-  public boolean deleteCompanyById(Long id) {
-    if (!companyDao.existsById(id)) {
+  public boolean deleteCompanyById(Long companyId) {
+    if (!companyDao.existsById(companyId)) {
       return false;
     }
-    companyDao.deleteById(id);
-    //TODO - delete cascade if child jobs or reviews exists to avoid internal server error.
+    companyDao.deleteById(companyId);
     return true;
   }
 

@@ -1,6 +1,7 @@
 package org.example.jobapplicationdemo.company;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,9 +26,9 @@ public class Company {
   private Long id;
   private String name;
   private String description;
-  @OneToMany(mappedBy = "company")
+  @OneToMany(mappedBy = "company", cascade = { CascadeType.REMOVE })
   @JsonIgnore
   private List<Job> jobs;
-  @OneToMany(mappedBy = "company")
+  @OneToMany(mappedBy = "company", cascade = { CascadeType.REMOVE })
   private List<Review> reviews;
 }

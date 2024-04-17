@@ -5,9 +5,9 @@ import java.util.Optional;
 
 public interface CompanyService {
   List<Company> getAllCompanies();
-  Optional<Company> getCompanyById(Long id);
+  Optional<Company> getCompanyById(Long companyId);
   void createCompany(Company company);
-  boolean updateCompanyById(Long id, Company updatedCompany);
-  boolean deleteCompanyById(Long id);
+  boolean updateCompanyById(Long companyId, Company updatedCompany);
+  boolean deleteCompanyById(Long companyId);
 
 }
